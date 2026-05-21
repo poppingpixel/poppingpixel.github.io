@@ -284,7 +284,7 @@ scholar:
   last_name: [Rohit]
   first_name: [M]
 
-  style: apa
+  style: apa # APA style formatting for publications
   locale: en
 
   source: /_bibliography/
