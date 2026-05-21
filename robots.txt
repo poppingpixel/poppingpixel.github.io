@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://poppingpixel.github.io/sitemap.xml
