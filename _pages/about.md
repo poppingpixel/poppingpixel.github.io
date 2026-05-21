@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: CS Researcher @ SRM Institute of Science and Technology
+subtitle: AI Researcher @ SRM Institute of Science and Technology
 
 profile:
   align: right
@@ -26,8 +26,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a fourth-year Computer Science and Engineering student at SRM Institute of Science and Technology, conducting research under the supervision of Dr. Pushpalatha M. My core research focuses on developing robust machine learning algorithms, specifically designing Multi-Agent Reinforcement Learning (MARL) architectures for quantitative finance and deploying Vision Transformers (ViTs) for high-accuracy medical imaging diagnostics. Driven by a passion for scalable, decision-theoretic AI systems, I aim to push the boundaries of how agents cooperate and represent complex spatial features in high-stakes environments.
+I am a fourth-year Computer Science and Engineering student at [SRM Institute of Science and Technology](https://www.srmuniv.ac.in), conducting research under the supervision of [Dr. Pushpalatha M](https://scholar.google.com/citations?user=EEUCaaoAAAAJ&hl=en). My research focuses on Multi-Agent Reinforcement Learning (MARL) for quantitative finance and Vision Transformers (ViTs) for medical imaging diagnostics.
 
-To translate these theoretical foundations into practice, I built **QuantAlpha**, a multi-agent reinforcement learning architecture utilizing Large Language Models (LLMs) to navigate high-frequency trading (HFT) dynamics and combat alpha decay on the National Stock Exchange (NSE). In medical imaging, I engineered self-supervised contrastive learning (SimCLR) pipelines integrated with Vision Transformers, significantly improving representations for automated brain tumor detection and localized anomaly segmentation.
+To translate these foundations into practice, I developed [QuantAlpha](https://github.com/poppingpixel/QuantAlpha), a multi-agent LLM architecture to navigate high-frequency trading dynamics on the [National Stock Exchange (NSE)](https://www.nseindia.com). In medical imaging, I engineered self-supervised contrastive learning (SimCLR) pipelines integrated with ViTs for automated brain tumor detection.
 
-Beyond research, my professional development includes completing the McKinsey Forward program and participating in VC Lab Cohort 21, which have sharpened my strategic thinking and understanding of venture ecosystems. I collaborate closely on multi-agent and deep learning projects with my research team, including Pradeep, Tamilselvan, and Charan. I am currently preparing for the direct PhD application cycle at Stanford University (December 2026) and applying for the WSAI Summer Internship 2026 at IIT Madras to continue advancing agentic AI systems.
+Beyond research, I completed the [McKinsey Forward program](https://www.mckinsey.com/locations/dot-org/our-programs/forward/overview) and participated in [VC Lab Cohort 21](https://govclab.com/vc-lab/). I collaborate on deep learning projects with Pradeep, [Tamilselvan](https://www.linkedin.com/in/tamilselvan-m-2ba998285), and [Charan](https://www.linkedin.com/in/charan-r-245143254). I am currently preparing for direct PhD applications at [Stanford University](https://www.stanford.edu) (Dec 2026) and the [WSAI](https://wsai.iitm.ac.in) Summer Internship at IIT Madras.
