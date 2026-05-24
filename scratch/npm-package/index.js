@@ -1,0 +1,1 @@
+class QuantAlphaMARL{static calculateCreditAssignment(t,a=.85){if(!Array.isArray(t)||0===t.length)return[];const r=t.reduce((t,a)=>t+Math.abs(a),0);return 0===r?t.map(()=>0):t.map(t=>t/r*a)}static grpoUpdateRule(t){return t*.001}}module.exports=QuantAlphaMARL;
