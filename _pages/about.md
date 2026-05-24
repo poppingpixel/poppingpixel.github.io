@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: AI Researcher @ SRM Institute of Science and Technology
+description: ROHIT M (PoppingPixel) - AI Researcher specializing in Multi-Agent Reinforcement Learning (MARL) for quantitative finance and Vision Transformers (ViT) for medical imaging diagnostics.
 
 profile:
   align: right

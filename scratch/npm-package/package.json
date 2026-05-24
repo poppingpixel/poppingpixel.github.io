@@ -1,0 +1,26 @@
+{
+  "name": "quantalpha-marl",
+  "version": "1.0.0",
+  "description": "Multi-Agent Reinforcement Learning (MARL) utility helpers for portfolio credit assignment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppingpixel/poppingpixel.github.io.git"
+  },
+  "keywords": [
+    "marl",
+    "reinforcement-learning",
+    "portfolio-management",
+    "quant",
+    "grpo"
+  ],
+  "author": "ROHIT M (PoppingPixel)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poppingpixel/poppingpixel.github.io/issues"
+  },
+  "homepage": "https://poppingpixel.github.io/"
+}
