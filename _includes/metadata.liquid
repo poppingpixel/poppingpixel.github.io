@@ -227,11 +227,40 @@
   {% endfor %}
 
   <script type="application/ld+json">
+    {% if page.url == '/' or page.url == '/index.html' %}
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": "{{ site.url }}{{ page.url | remove: 'index.html' }}#profile",
+      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "name": "{{ author_name }}'s Academic Portfolio",
+      "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": "{{ author_name }}",
+        "alternateName": "PoppingPixel",
+        "jobTitle": "{{ site.title | split: '|' | last | strip }}",
+        "url": "{{ site.url }}",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "SRM Institute of Science and Technology",
+          "url": "https://www.srmuniv.ac.in"
+        },
+        "image": "{{ site.url }}/assets/img/prof_pic.jpg",
+        {% assign sameas_array = sameaslinks %}
+        {% assign quantalpha_link = "https://github.com/poppingpixel/QuantAlpha" %}
+        {% assign sameas_array = sameas_array | push: quantalpha_link %}
+        "sameAs": {{ sameas_array | jsonify }}
+      }
+    }
+    {% else %}
     {
         "author":
         {
             "@type": "Person",
-            "name": "{{ author_name }}"
+            "name": "{{ author_name }}",
+            "@id": "{{ site.url }}/#person"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
@@ -243,5 +272,6 @@
         "name": "{{ author_name }}",
         "@context": "https://schema.org"
     }
+    {% endif %}
   </script>
 {% endif %}

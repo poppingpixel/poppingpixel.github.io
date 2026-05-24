@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <!-- Head -->
+  <head>
+    {% include head.liquid %}
+    <style type="text/css">
+      body.links-body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at 50% 50%, #0d111e 0%, #05060b 100%);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+      .links-container {
+        width: 100%;
+        max-width: 480px;
+        padding: 40px 20px;
+        text-align: center;
+        box-sizing: border-box;
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .profile-header {
+        margin-bottom: 32px;
+      }
+      .profile-image-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+      .profile-image-wrapper::after {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #6c63ff 100%);
+        z-index: 1;
+        animation: rotateGlow 6s linear infinite;
+      }
+      @keyframes rotateGlow {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .profile-avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+        border: 4px solid #05060b;
+      }
+      .profile-name {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .profile-subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        color: #8c9ba5;
+        margin: 0;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .links-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .link-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 16px;
+        text-decoration: none !important;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+      }
+      .link-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+        transition: 0.5s;
+      }
+      .link-item:hover::before {
+        left: 100%;
+      }
+      .link-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(108, 99, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(108, 99, 255, 0.15);
+      }
+      .link-icon {
+        font-size: 20px;
+        margin-right: 12px;
+        color: #4facfe;
+        transition: color 0.3s;
+      }
+      .link-item:hover .link-icon {
+        color: #00f2fe;
+      }
+      .link-text {
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+      }
+      .links-footer {
+        font-size: 12px;
+        color: #657786;
+        letter-spacing: 0.5px;
+      }
+      .links-footer a {
+        color: #4facfe;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .links-footer a:hover {
+        color: #00f2fe;
+      }
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body class="links-body">
+    <div class="links-container">
+      <!-- Profile Header -->
+      <div class="profile-header">
+        <div class="profile-image-wrapper">
+          <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" class="profile-avatar" alt="{{ site.first_name }} {{ site.last_name }}">
+        </div>
+        <h1 class="profile-name">
+          {{ site.first_name }}
+          {{ site.last_name }}
+        </h1>
+        <p class="profile-subtitle">{{ site.title | split: '|' | last | strip }}</p>
+      </div>
+
+      <!-- Links List -->
+      <div class="links-list">
+        <a href="{{ '/' | relative_url }}" class="link-item">
+          <i class="fa-solid fa-house link-icon"></i>
+          <span class="link-text">Personal Portfolio</span>
+        </a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" class="link-item">
+          <i class="fa-brands fa-github link-icon"></i>
+          <span class="link-text">GitHub Profile</span>
+        </a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="link-item">
+          <i class="fa-brands fa-linkedin link-icon"></i>
+          <span class="link-text">LinkedIn Profile</span>
+        </a>
+        <a href="https://github.com/poppingpixel/QuantAlpha" target="_blank" rel="noopener noreferrer" class="link-item">
+          <i class="fa-solid fa-chart-line link-icon"></i>
+          <span class="link-text">QuantAlpha MARL Framework</span>
+        </a>
+        <a href="mailto:{{ site.email }}" class="link-item">
+          <i class="fa-solid fa-envelope link-icon"></i>
+          <span class="link-text">Contact Email</span>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <div class="links-footer">
+        <p>
+          &copy; {{ 'now' | date: '%Y' }}
+          <a href="{{ '/' | relative_url }}">
+            {{- site.first_name }}
+            {{ site.last_name -}}</a
+          >. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+    <!-- JavaScripts -->
+    {% include scripts.liquid %}
+  </body>
+</html>

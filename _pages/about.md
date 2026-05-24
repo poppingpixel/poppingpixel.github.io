@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a fourth-year Computer Science and Engineering student at [SRM Institute of Science and Technology](https://www.srmuniv.ac.in), conducting research under the supervision of [Dr. Pushpalatha M](https://scholar.google.com/citations?user=EEUCaaoAAAAJ&hl=en). My research focuses on Multi-Agent Reinforcement Learning (MARL) for quantitative finance and Vision Transformers (ViTs) for medical imaging diagnostics.
+I am **ROHIT M** (also known online as **PoppingPixel**), a fourth-year Computer Science and Engineering student at [SRM Institute of Science and Technology](https://www.srmuniv.ac.in), conducting research under the supervision of [Dr. Pushpalatha M](https://scholar.google.com/citations?user=EEUCaaoAAAAJ&hl=en). My research focuses on Multi-Agent Reinforcement Learning (MARL) for quantitative finance and Vision Transformers (ViTs) for medical imaging diagnostics.
 
 To translate these foundations into practice, I developed [QuantAlpha](https://github.com/poppingpixel/QuantAlpha), a multi-agent LLM architecture to navigate high-frequency trading dynamics on the [National Stock Exchange (NSE)](https://www.nseindia.com). In medical imaging, I engineered self-supervised contrastive learning (SimCLR) pipelines integrated with ViTs for automated brain tumor detection.
 
